@@ -1,0 +1,78 @@
+Personal Finance Expense Tracker – Console Based Project:
+===========================================================
+
+
+1: Expense Class
+	Fields:
+		• int id
+		• double amount
+		• String category
+		• LocalDate date
+		• String note
+- Add constructors, getters, setters, and toString ().
+---------------------------------------------------------
+
+2: ExpenseManager Class
+
+Handles all business operations.
+	Data Structures Used:
+		• ArrayList<Expense> expenses → stores all expenses
+		• PriorityQueue<Expense> maxPQ → highest expense first
+		• PriorityQueue<Expense> minPQ → lowest expense first
+Functions inside ExpenseManager:
+	1. addExpense(Expense e)
+	2. viewAllExpenses()
+	3. viewByCategory(String category)
+	4. viewByMonth(int month, int year)
+	5. getTotalExpense()
+	6. getHighestExpense() → uses max PriorityQueue
+	7. getLowestExpense() → uses min PriorityQueue
+
+-----------------------------------------------------------
+3. Detailed Description of Each Feature
+
+a . Add Expense
+User enters:
+	• Amount
+	• Category (Food, Travel, Shopping, etc.)
+	• Date (YYYY-MM-DD)
+	• Note
+System:
+	• Creates an Expense object
+	• Adds it to ArrayList
+	• Adds it to maxPQ and minPQ
+________________________________________
+b . View All Expenses
+	Simply loop through ArrayList<Expense> and print.
+________________________________________
+c . View Expenses by Category
+	• Get category from user
+	• Loop and display matching entries
+	• Comparison should be case-insensitive
+________________________________________
+d . Monthly Summary
+Input: month + year
+The system displays:
+	• All expenses of that month
+	• Total spent
+	• Number of expenses
+	• Highest expense of that month
+	• Lowest expense of that month
+(Use filtering + temporary variables)
+________________________________________
+e . Get Total Expense
+	Traverse the ArrayList → sum all amounts.
+________________________________________
+f . Highest Expense (Using PriorityQueue)
+	maxPQ - peek() returns the highest amount expense instantly.
+________________________________________
+g . Lowest Expense (Using PriorityQueue)
+	minPQ- peek() returns the lowest amount expense instantly.
+	
+------------------------------------------------------------
+
+4. Build Full Menu-Driven Application
+
+- Implement all features in one console application.
+- Include add, view, filter, monthly summary, highest/lowest, and exit.
+- Ensure input validation.
