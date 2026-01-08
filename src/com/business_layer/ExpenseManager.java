@@ -79,3 +79,4 @@ public class ExpenseManager {
 			System.out.println("Lowest expense: "+minpqExpense.peek());
 	}
 }
+
